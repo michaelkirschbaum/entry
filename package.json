@@ -1,0 +1,9 @@
+{
+  "name": "keyless",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/michaelkirschbaum/keyless",
+  "author": "Michael Kirschbaum",
+  "license": "MIT",
+  "private": false
+}
