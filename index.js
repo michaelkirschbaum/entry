@@ -1,14 +1,14 @@
 import http from 'http'
 import Express from 'express'
-import { MessagingResponse } from 'twilio'
 import bodyParser from 'body-parser'
+const MessagingResponse = require('twilio').twiml.MessagingResponse
 
 const app = new Express()
 
-app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: false }))
 
 app.post('/', (req, res) => {
-  const twiml = new MessagingResponse()
+  const twiml = new MessagingResponse();
 
   console.log(req.body.Body)
 
