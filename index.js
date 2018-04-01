@@ -1,10 +1,18 @@
-import http from 'http';
-import Express from 'express';
+import http from 'http'
+import Express from 'express'
+import { MessagingResponse } from 'twilio'
+import bodyParser from 'body-parser'
 
-const app = new Express();
+const app = new Express()
 
-  app.post('/sms', (req, res) => {
-    console.log("message received");
+app.use(bodyParser.json())
+
+app.post('/', (req, res) => {
+  const twiml = new MessagingResponse()
+
+  console.log(req.body.Body)
 })
 
-http.createServer(app).listen(3000, () => console.log("listening on port 3000"));
+http.createServer(app).listen(1337, () => {
+  console.log("listening on port 3000")
+})
