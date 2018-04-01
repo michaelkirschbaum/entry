@@ -10,7 +10,8 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.post('/', (req, res) => {
   const twiml = new MessagingResponse();
 
-  console.log(req.body.Body)
+  if (req.body.Body == "test")
+    console.log("opening")
 
   res.writeHead(200, { 'Content-Type': 'text/xml' })
   res.end(twiml.toString())
