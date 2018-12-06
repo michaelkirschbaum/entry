@@ -1,4 +1,4 @@
-FROM node:carbon
+FROM hypriot:rpi-node:latest
 WORKDIR /usr/src/app
 COPY package*.json ./
 RUN yarn
