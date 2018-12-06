@@ -1,4 +1,4 @@
-FROM hypriot:rpi-node:latest
+FROM hypriot/rpi-node:latest
 WORKDIR /usr/src/app
 COPY package*.json ./
 RUN yarn
