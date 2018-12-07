@@ -1,7 +1,7 @@
 FROM hypriot/rpi-node:latest
 WORKDIR /usr/src/app
 COPY package*.json ./
-RUN yarn
+RUN npm install
 COPY . .
-EXPOSE 1337
-CMD ["yarn", "start"]
+EXPOSE 3000
+CMD ["npm", "start"]
