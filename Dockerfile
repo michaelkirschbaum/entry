@@ -1,3 +1,4 @@
+FROM resin/rpi-raspbian:latest
 FROM node:carbon
 WORKDIR /usr/src/app
 COPY package*.json ./
